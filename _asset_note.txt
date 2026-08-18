@@ -1,0 +1,1 @@
+Navigation lockup asset will be used from images/navigation-logo-nav.svg.
