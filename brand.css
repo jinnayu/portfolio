@@ -1,0 +1,73 @@
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.nav-brand-mark {
+  width: 34px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+  flex: 0 0 auto;
+}
+
+.nav-brand-divider {
+  position: relative;
+  width: 1px;
+  height: 31px;
+  margin: 0 15px;
+  background: #D4B07A;
+  flex: 0 0 auto;
+}
+
+.nav-brand-divider::after {
+  content: "✣";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px 0;
+  color: #D4B07A;
+  background: rgba(244, 243, 232, .94);
+  font-size: 9px;
+  line-height: 1;
+}
+
+.nav-wordmark {
+  color: #8499B4;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .19em;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .nav-brand-mark {
+    width: 28px;
+    height: 33px;
+  }
+
+  .nav-brand-divider {
+    height: 25px;
+    margin: 0 10px;
+  }
+
+  .nav-wordmark {
+    font-size: .92rem;
+    letter-spacing: .14em;
+  }
+}
+
+@media (max-width: 460px) {
+  .nav-brand-divider,
+  .nav-wordmark {
+    display: none;
+  }
+}
