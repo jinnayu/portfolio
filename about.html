@@ -7,68 +7,81 @@
 <link rel="icon" href="images/favicon-croissant.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="about-page">
 <header class="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="images/croissant-logo.png" alt="" class="logo-mark">
-    Jinna Yu
-  </a>
+  <a href="index.html" class="nav-logo"><img src="images/croissant-logo.png" alt="" class="logo-mark">Jinna Yu</a>
   <nav class="nav-links">
     <a href="index.html#work">Work</a>
     <a href="about.html">About</a>
     <a href="index.html#contact">Contact</a>
-    <a href="resume.pdf" class="nav-resume">Resume</a>
+    <a href="resume.pdf" class="nav-resume">Resume ↗</a>
   </nav>
 </header>
 
 <main>
-
   <section class="about-hero">
-    <p class="eyebrow">About</p>
-    <h1>Sociology background. Designer's eye. Soccer player's discipline.</h1>
+    <p class="eyebrow reveal">About / the person behind the pixels</p>
+    <h1 class="reveal">I notice things.<br>Then I usually need to know <em>why.</em></h1>
   </section>
 
-  <section class="about-body">
-    <!-- Real photo of you recommended here instead of a placeholder graphic —
-         a workspace shot, a candid, or a soccer/travel photo works well for warmth. -->
-    <div class="media-placeholder">Drop image: about-portrait.jpg</div>
+  <div class="about-content">
+    <section class="about-lede reveal">
+      <div>
+        <p class="eyebrow">How I got here</p>
+        <h2>Sociology first.<br>Design followed.</h2>
+      </div>
+      <div>
+        <p>I didn’t start college planning to become a designer. I studied Sociology at UT Austin, which meant spending a lot of time thinking about people: why we behave the way we do, how systems shape our choices, and why something obvious to one person can feel completely unintuitive to another.</p>
+        <p>Eventually I realized that was also the part of design I cared about most. Not just making something look good — understanding why it wasn’t working in the first place.</p>
+      </div>
+    </section>
 
-    <p>I came to design through a Sociology degree, not a design program — which means I start from how people actually behave, not just how interfaces are supposed to look. That background, plus a UX/UI certificate from UT Austin's School of Information, shows up in how I approach research and problem framing.</p>
-    <p>Right now I split time between contract work and an independent practice, Studio Jinner, while looking for the right in-house team to join full-time — ideally one with a design system worth sinking my teeth into.</p>
-  </section>
+    <section class="reveal">
+      <p class="eyebrow">Somehow, it all connects</p>
+      <div class="about-grid">
+        <article class="about-block"><h3>I analyze.</h3><p>I want to understand the behavior behind the problem before jumping to a solution.</p></article>
+        <article class="about-block"><h3>I organize.</h3><p>Messy information is strangely satisfying. Give me an overgrown Figma file, a complicated hierarchy, or twelve competing priorities.</p></article>
+        <article class="about-block"><h3>I question.</h3><p>“Because we’ve always done it that way” is useful context. It isn’t a design rationale.</p></article>
+        <article class="about-block"><h3>I optimize.</h3><p>I like the part after launch — the data, friction, and tiny changes that make the next version better.</p></article>
+      </div>
+    </section>
 
-  <section class="offclock">
-    <h2>Off the clock</h2>
-    <div class="offclock-grid">
-      <div class="offclock-item">
-        <strong>Soccer</strong>
-        Played competitively since high school. Still shapes how I think about teamwork and pressure.
+    <section class="about-proof reveal">
+      <p class="eyebrow">A few numbers I’m proud of</p>
+      <h2>Pretty screens are nice.<br>Proof is nicer.</h2>
+      <div class="metric-grid">
+        <div class="metric-card"><div class="metric-number">6.15%</div><div class="metric-label">exit-pop conversion</div></div>
+        <div class="metric-card"><div class="metric-number">$30K+</div><div class="metric-label">email revenue · first 30 days</div></div>
+        <div class="metric-card"><div class="metric-number">10K+</div><div class="metric-label">app downloads</div></div>
       </div>
-      <div class="offclock-item">
-        <strong>Languages</strong>
-        Bilingual in English and Korean.
+    </section>
+
+    <section class="offclock reveal">
+      <p class="eyebrow">Off the clock</p>
+      <h2>A person outside<br>of the pixels.</h2>
+      <div class="offclock-grid">
+        <div class="offclock-item"><strong>Travel / street</strong>Photographing things I probably don’t need a picture of.</div>
+        <div class="offclock-item"><strong>Food / cooking</strong>Korean food, restaurant opinions, and figuring out dinner from what’s already in the fridge.</div>
+        <div class="offclock-item"><strong>Photo / detail</strong>Photography trained my eye before I ever called myself a designer.</div>
+        <div class="offclock-item"><strong>Croissant :)</strong>Finding the best croissant in any given city. The logo really is that simple.</div>
       </div>
-      <div class="offclock-item">
-        <strong>Based in</strong>
-        Austin, TX.
-      </div>
-      <div class="offclock-item">
-        <strong>Why a croissant</strong>
-        <!-- Add your own one-line story here — e.g. why the croissant became your mark -->
-        [Your croissant story goes here]
-      </div>
+    </section>
+  </div>
+
+  <section class="contact reveal" id="contact">
+    <p class="eyebrow">Anyway, that’s enough about me</p>
+    <h2>Tell me about your team.</h2>
+    <div class="contact-links">
+      <a href="mailto:hello@jinnayu.com">Email me</a>
+      <a href="https://www.linkedin.com/in/ejinnayu/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </section>
-
 </main>
 
-<footer class="footer">
-  <p>&copy; 2026 Jinna Yu</p>
-</footer>
-
+<footer class="footer"><p>© 2026 Jinna Yu</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
