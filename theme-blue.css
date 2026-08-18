@@ -47,6 +47,14 @@ body { background: #F8F5F0; color: #334353; }
   background: var(--brand-blue);
   color: rgba(255,253,249,.72);
 }
+.case-contact {
+  margin: 0;
+  padding: 52px 7vw 46px;
+  border-radius: 0;
+}
+.case-contact h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
 
 /* About */
 .about-page { background: #F8F5F0; }
@@ -91,6 +99,7 @@ body { background: #F8F5F0; color: #334353; }
 }
 @media (max-width: 720px) {
   .nav-logo.brand-lockup img { width: 145px; height: 49px; }
+  .case-contact { padding: 44px 22px 40px; }
 }
 @media (max-width: 520px) {
   .nav-logo.brand-lockup img { width: 112px; height: 38px; }
