@@ -84,23 +84,21 @@ body { background: #F8F5F0; color: #334353; }
 }
 .metric-card { border-color: rgba(132,153,180,.20); }
 
-/* Navigation lockup */
+/* Navigation lockup: left aligned, slightly larger */
 .nav {
   min-height: 78px;
 }
 .nav-logo.brand-lockup {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
+  transform: none;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-width: 0;
   z-index: 2;
 }
 .nav-logo.brand-lockup img {
-  width: 211px;
+  width: 214px;
   height: auto;
   max-width: none;
   object-fit: contain;
@@ -111,16 +109,11 @@ body { background: #F8F5F0; color: #334353; }
 }
 
 @media (max-width: 900px) {
-  .nav-logo.brand-lockup img { width: 190px; }
+  .nav-logo.brand-lockup img { width: 188px; }
 }
 @media (max-width: 720px) {
   .nav {
     min-height: 62px;
-  }
-  .nav-logo.brand-lockup {
-    position: static;
-    transform: none;
-    justify-content: flex-start;
   }
   .nav-logo.brand-lockup img { width: 145px; }
   .case-contact { padding: 44px 22px 40px; }
