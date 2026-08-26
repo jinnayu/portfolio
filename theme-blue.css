@@ -46,6 +46,9 @@ body { background: #F8F5F0; color: #334353; }
 .footer {
   background: var(--brand-blue);
   color: rgba(255,253,249,.72);
+  text-align: left;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 .case-contact {
   margin: 0;
@@ -84,9 +87,11 @@ body { background: #F8F5F0; color: #334353; }
 }
 .metric-card { border-color: rgba(132,153,180,.20); }
 
-/* Navigation lockup: left aligned, slightly larger */
+/* Navigation lockup: compact, left aligned, fully visible */
 .nav {
-  min-height: 78px;
+  min-height: 66px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .nav-logo.brand-lockup {
   position: static;
@@ -96,28 +101,29 @@ body { background: #F8F5F0; color: #334353; }
   justify-content: flex-start;
   min-width: 0;
   z-index: 2;
+  overflow: visible;
 }
 .nav-logo.brand-lockup img {
-  width: 214px;
+  width: 176px;
   height: auto;
   max-width: none;
+  max-height: none;
   object-fit: contain;
+  object-position: center;
   display: block;
+  overflow: visible;
 }
-.nav-links {
-  margin-left: auto;
-}
+.nav-links { margin-left: auto; }
 
 @media (max-width: 900px) {
-  .nav-logo.brand-lockup img { width: 188px; }
+  .nav-logo.brand-lockup img { width: 160px; }
 }
 @media (max-width: 720px) {
-  .nav {
-    min-height: 62px;
-  }
-  .nav-logo.brand-lockup img { width: 145px; }
+  .nav { min-height: 58px; }
+  .nav-logo.brand-lockup img { width: 140px; }
   .case-contact { padding: 44px 22px 40px; }
+  .footer { padding-left: 22px; padding-right: 22px; }
 }
 @media (max-width: 520px) {
-  .nav-logo.brand-lockup img { width: 112px; }
+  .nav-logo.brand-lockup img { width: 108px; }
 }
