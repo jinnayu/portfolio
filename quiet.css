@@ -41,7 +41,7 @@ body { background: var(--quiet-cream); color: var(--quiet-ink); }
 .hero-name {
   position: absolute;
   top: auto;
-  bottom: calc(8vh + 180px);
+  bottom: calc(8vh + 210px);
   left: 50%;
   width: min(1050px, 86vw);
   transform: translateX(-50%);
@@ -215,7 +215,7 @@ body { background: var(--quiet-cream); color: var(--quiet-ink); }
 @media (max-width: 780px) {
   .home-hero { min-height: 82vh; }
   .hero-wash { inset: 19vh 0 auto; height: 37vh; }
-  .hero-name { bottom: calc(7vh + 165px); }
+  .hero-name { bottom: calc(7vh + 190px); }
   .hero-name h1 { font-size: clamp(5rem, 23vw, 7.6rem); }
   .hero-detail { bottom: 7vh; }
   .hero-detail > p { font-size: 1.55rem; }
