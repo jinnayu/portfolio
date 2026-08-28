@@ -87,7 +87,7 @@ body { background: #F8F5F0; color: #334353; }
 }
 .metric-card { border-color: rgba(132,153,180,.20); }
 
-/* Navigation lockup: approved logo, slightly smaller */
+/* Navigation lockup: approved logo, 142px desktop */
 .nav {
   min-height: 66px;
   padding-top: 2px;
