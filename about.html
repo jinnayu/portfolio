@@ -7,68 +7,69 @@
 <link rel="icon" href="images/favicon-croissant.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="compact.css">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="theme-blue.css">
 </head>
-<body>
-
+<body class="about-page">
 <header class="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="images/croissant-logo.png" alt="" class="logo-mark">
-    Jinna Yu
-  </a>
-  <nav class="nav-links">
-    <a href="index.html#work">Work</a>
-    <a href="about.html">About</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="resume.pdf" class="nav-resume">Resume</a>
-  </nav>
+  <a href="index.html" class="nav-logo brand-lockup" aria-label="Jinna Yu home"><img src="images/navigation-logo-nav.svg" alt="Jinna Yu"></a>
+  <nav class="nav-links"><a href="index.html#work">Work</a><a href="about.html">About</a><a href="index.html#contact">Contact</a><a href="resume.pdf" class="nav-resume">Resume ↗</a></nav>
 </header>
 
 <main>
-
   <section class="about-hero">
-    <p class="eyebrow">About</p>
-    <h1>Sociology background. Designer's eye. Soccer player's discipline.</h1>
+    <p class="eyebrow reveal">About</p>
+    <h1 class="reveal">I notice things.<br>Then I need to know <em>why.</em></h1>
   </section>
 
-  <section class="about-body">
-    <!-- Real photo of you recommended here instead of a placeholder graphic —
-         a workspace shot, a candid, or a soccer/travel photo works well for warmth. -->
-    <div class="media-placeholder">Drop image: about-portrait.jpg</div>
+  <div class="about-content">
+    <section class="about-lede reveal">
+      <div><p class="eyebrow">How I got here</p><h2>Sociology first.<br>Design followed.</h2></div>
+      <div><p>I studied Sociology at UT Austin before moving into UX. That background still shapes how I work: understand people, find the pattern, simplify the system.</p></div>
+    </section>
 
-    <p>I came to design through a Sociology degree, not a design program — which means I start from how people actually behave, not just how interfaces are supposed to look. That background, plus a UX/UI certificate from UT Austin's School of Information, shows up in how I approach research and problem framing.</p>
-    <p>Right now I split time between contract work and an independent practice, Studio Jinner, while looking for the right in-house team to join full-time — ideally one with a design system worth sinking my teeth into.</p>
+    <section class="reveal">
+      <p class="eyebrow">How I think</p>
+      <div class="about-grid">
+        <article class="about-block"><h3>Analyze.</h3><p>Find the behavior behind the problem.</p></article>
+        <article class="about-block"><h3>Organize.</h3><p>Turn messy information into a clear system.</p></article>
+        <article class="about-block"><h3>Optimize.</h3><p>Use data and iteration to make it better.</p></article>
+      </div>
+    </section>
+
+    <section class="about-proof reveal">
+      <p class="eyebrow">A few numbers</p>
+      <h2>Proof, not just polish.</h2>
+      <div class="metric-grid">
+        <div class="metric-card"><div class="metric-number">6.15%</div><div class="metric-label">exit-pop conversion</div></div>
+        <div class="metric-card"><div class="metric-number">$30K+</div><div class="metric-label">email revenue · first 30 days</div></div>
+        <div class="metric-card"><div class="metric-number">10K+</div><div class="metric-label">app downloads</div></div>
+      </div>
+    </section>
+
+    <section class="offclock reveal">
+      <p class="eyebrow">Off the clock</p>
+      <h2>Usually somewhere between...</h2>
+      <div class="offclock-grid">
+        <div class="offclock-item"><strong>Photography</strong>Street scenes + tiny details.</div>
+        <div class="offclock-item"><strong>Food</strong>Korean cooking + restaurant opinions.</div>
+        <div class="offclock-item"><strong>Travel</strong>New places, camera in hand.</div>
+        <div class="offclock-item"><strong>Croissants</strong>Always worth the detour.</div>
+      </div>
+    </section>
+  </div>
+
+  <section class="contact reveal" id="contact">
+    <p class="eyebrow">Thanks for stopping by</p>
+    <h2>Tell me about your team.</h2>
+    <div class="contact-links"><a href="mailto:hello@jinnayu.com">Email me</a><a href="https://www.linkedin.com/in/ejinnayu/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
   </section>
-
-  <section class="offclock">
-    <h2>Off the clock</h2>
-    <div class="offclock-grid">
-      <div class="offclock-item">
-        <strong>Soccer</strong>
-        Played competitively since high school. Still shapes how I think about teamwork and pressure.
-      </div>
-      <div class="offclock-item">
-        <strong>Languages</strong>
-        Bilingual in English and Korean.
-      </div>
-      <div class="offclock-item">
-        <strong>Based in</strong>
-        Austin, TX.
-      </div>
-      <div class="offclock-item">
-        <strong>Why a croissant</strong>
-        <!-- Add your own one-line story here — e.g. why the croissant became your mark -->
-        [Your croissant story goes here]
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="footer">
-  <p>&copy; 2026 Jinna Yu</p>
-</footer>
-
+<footer class="footer"><p>© 2026 Jinna Yu</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
