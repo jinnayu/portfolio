@@ -87,7 +87,7 @@ body { background: #F8F5F0; color: #334353; }
 }
 .metric-card { border-color: rgba(132,153,180,.20); }
 
-/* Navigation lockup: exact uploaded logo, same nav footprint */
+/* Navigation lockup: approved logo, slightly smaller */
 .nav {
   min-height: 66px;
   padding-top: 2px;
@@ -100,11 +100,14 @@ body { background: #F8F5F0; color: #334353; }
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
+  width: 142px;
+  height: 57px;
+  flex: 0 0 142px;
   z-index: 2;
   overflow: visible;
 }
 .nav-logo.brand-lockup img {
-  width: 154px;
+  width: 142px;
   height: auto;
   max-width: none;
   max-height: none;
@@ -116,14 +119,29 @@ body { background: #F8F5F0; color: #334353; }
 .nav-links { margin-left: auto; }
 
 @media (max-width: 900px) {
-  .nav-logo.brand-lockup img { width: 148px; }
+  .nav-logo.brand-lockup {
+    width: 136px;
+    height: 54px;
+    flex-basis: 136px;
+  }
+  .nav-logo.brand-lockup img { width: 136px; }
 }
 @media (max-width: 720px) {
   .nav { min-height: 58px; }
-  .nav-logo.brand-lockup img { width: 132px; }
+  .nav-logo.brand-lockup {
+    width: 122px;
+    height: 49px;
+    flex-basis: 122px;
+  }
+  .nav-logo.brand-lockup img { width: 122px; }
   .case-contact { padding: 44px 22px 40px; }
   .footer { padding-left: 22px; padding-right: 22px; }
 }
 @media (max-width: 520px) {
-  .nav-logo.brand-lockup img { width: 104px; }
+  .nav-logo.brand-lockup {
+    width: 96px;
+    height: 39px;
+    flex-basis: 96px;
+  }
+  .nav-logo.brand-lockup img { width: 96px; }
 }
