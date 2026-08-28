@@ -48,6 +48,29 @@
   white-space: nowrap;
 }
 
+/* Approved navigation lockup. Rendered as a background so a broken local asset can never show. */
+.nav-logo.brand-lockup {
+  width: 154px;
+  height: 62px;
+  flex: 0 0 154px;
+  background-image: url("https://raw.githubusercontent.com/jinnayu/portfolio/2dd818f21040819dcd1540a73ac2b440b8ef85f9/images/navigation-logo-exact.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+.nav-logo.brand-lockup img {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .nav-logo.brand-lockup {
+    width: 148px;
+    height: 59px;
+    flex-basis: 148px;
+  }
+}
+
 @media (max-width: 720px) {
   .nav-brand-mark {
     width: 28px;
@@ -62,6 +85,20 @@
   .nav-wordmark {
     font-size: .92rem;
     letter-spacing: .14em;
+  }
+
+  .nav-logo.brand-lockup {
+    width: 132px;
+    height: 53px;
+    flex-basis: 132px;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-logo.brand-lockup {
+    width: 104px;
+    height: 42px;
+    flex-basis: 104px;
   }
 }
 
