@@ -131,3 +131,22 @@ body { background: #F8F5F0; color: #334353; }
     flex-basis: 96px;
   }
 }
+
+/* Uploaded Jinna Yu wordmark: preserve its original color and aspect ratio. */
+.nav-logo.brand-lockup {
+  background-image: none;
+  width: 123px;
+  height: 44px;
+  flex: 0 0 123px;
+}
+.nav-logo.brand-lockup img {
+  display: block !important;
+  width: 123px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .nav-logo.brand-lockup { width: 102.5px; flex-basis: 102.5px; }
+  .nav-logo.brand-lockup img { width: 102.5px; }
+}
