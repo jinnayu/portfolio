@@ -173,3 +173,54 @@ body::before {
 @media (max-width: 720px) {
   body::before { height: 80px; }
 }
+
+/* Approved compact homepage contact section. */
+.contact.contact-opportunities {
+  box-sizing: border-box;
+  padding: 44px 6.3%;
+  min-height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+.contact-opportunities .contact-copy { min-width: 0; }
+.contact-opportunities .eyebrow {
+  margin: 0 0 22px;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .1em;
+}
+.contact.contact-opportunities h2 {
+  margin: 0;
+  font-size: clamp(30px, 4.5vw, 49px);
+  line-height: 1.05;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+.contact-opportunities .contact-email { color: inherit; }
+.contact-opportunities .contact-email:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-opportunities .contact-links {
+  flex-shrink: 0;
+  gap: 10px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+.contact-opportunities .contact-links a {
+  padding: 10px 15px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+}
+@media (max-width: 600px) {
+  .contact.contact-opportunities {
+    flex-wrap: wrap;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+  .contact-opportunities .eyebrow { margin-bottom: 16px; }
+}
