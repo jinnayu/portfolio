@@ -22,11 +22,12 @@ body { background: #F8F5F0; color: #334353; }
 .home-hero { background: #F8F5F0; }
 .hero-wash {
   background:
-    radial-gradient(ellipse at 18% 52%, rgba(132,153,180,.30) 0, rgba(132,153,180,.16) 26%, transparent 58%),
-    radial-gradient(ellipse at 52% 49%, rgba(242,232,226,.82) 0, rgba(242,232,226,.42) 30%, transparent 60%),
-    radial-gradient(ellipse at 82% 48%, rgba(132,153,180,.38) 0, rgba(132,153,180,.18) 28%, transparent 58%);
+    radial-gradient(ellipse at 25% 48%, #6A9FCC 0%, transparent 66%),
+    radial-gradient(ellipse at 78% 48%, #6A9FCC 0%, transparent 66%);
+  filter: blur(56px);
+  opacity: .45;
 }
-.hero-detail > p em { color: var(--brand-blue-deep); }
+.hero-detail > p em { color: #465F7A; }
 .hero-mini { color: #778695; }
 .home-intro { background: var(--brand-blue-pale); }
 .work { background: #F8F5F0; }
