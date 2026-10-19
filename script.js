@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.body.classList.contains('case-page')) {
+    const updateNavGlass = () => {
+      document.body.classList.toggle('has-scrolled', window.scrollY > 8);
+    };
+    updateNavGlass();
+    window.addEventListener('scroll', updateNavGlass, { passive: true });
+    window.addEventListener('pageshow', updateNavGlass);
+  }
+
   const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

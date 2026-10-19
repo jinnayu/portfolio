@@ -229,3 +229,13 @@ body::before {
 @media (max-width: 720px) {
   .contact-opportunities .contact-links a { font-size: .7rem; }
 }
+
+/* Case-study glass strip appears only after scrolling; keep the nav pill visible. */
+.case-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.case-page.has-scrolled::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .case-page::before { transition: none; }
+}
