@@ -151,3 +151,24 @@ body { background: #F8F5F0; color: #334353; }
   .nav-logo.brand-lockup { width: 60.9875px; flex-basis: 60.9875px; }
   .nav-logo.brand-lockup img { width: 60.9875px; }
 }
+
+/* Frost the scrolling content in the gap above and behind the floating nav. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: 96px;
+  z-index: 99;
+  pointer-events: none;
+  background: rgba(248, 245, 240, .64);
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+.nav, .case-page .nav {
+  background: rgba(248, 245, 240, .78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (max-width: 720px) {
+  body::before { height: 80px; }
+}
