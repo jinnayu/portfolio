@@ -177,7 +177,7 @@ body::before {
 /* Approved compact homepage contact section. */
 .contact.contact-opportunities {
   box-sizing: border-box;
-  padding: 44px 6.3%;
+  padding: 44px 6.3% 59px;
   min-height: 190px;
   display: flex;
   align-items: flex-end;
@@ -187,13 +187,13 @@ body::before {
 .contact-opportunities .contact-copy { min-width: 0; }
 .contact-opportunities .eyebrow {
   margin: 0 0 22px;
-  font-size: 10px;
+  font-size: .72rem;
   line-height: 1.4;
-  letter-spacing: .1em;
+  letter-spacing: .08em;
 }
 .contact.contact-opportunities h2 {
   margin: 0;
-  font-size: clamp(30px, 4.5vw, 49px);
+  font-size: clamp(33px, 4.95vw, 53.9px);
   line-height: 1.05;
   letter-spacing: normal;
   overflow-wrap: anywhere;
@@ -211,7 +211,8 @@ body::before {
 }
 .contact-opportunities .contact-links a {
   padding: 10px 15px;
-  font-size: 10px;
+  font-family: var(--font-body);
+  font-size: .8rem;
   line-height: 1.4;
   text-transform: none;
   letter-spacing: normal;
@@ -219,8 +220,12 @@ body::before {
 @media (max-width: 600px) {
   .contact.contact-opportunities {
     flex-wrap: wrap;
-    padding: 32px 24px;
+    padding: 32px 24px 47px;
     gap: 24px;
   }
   .contact-opportunities .eyebrow { margin-bottom: 16px; }
+}
+
+@media (max-width: 720px) {
+  .contact-opportunities .contact-links a { font-size: .7rem; }
 }
