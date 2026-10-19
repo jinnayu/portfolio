@@ -62,8 +62,13 @@ a {
   line-height: 1;
 }
 
-.nav-logo svg { display: block; width: 22px; height: 22px; }
-.logo-mark { display: block; width: 22px; height: 22px; object-fit: contain; }
+.nav-logo { flex-shrink: 0; min-height: 44px; }
+.nav-wordmark { display: block; width: 123px; height: 24px; object-fit: contain; }
+
+@media (max-width: 380px) {
+  .nav-wordmark { width: 102.5px; height: 20px; }
+  .nav .nav-links { gap: 0.65rem; }
+}
 
 .nav-links {
   display: flex;
