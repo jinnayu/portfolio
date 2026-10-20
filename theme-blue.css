@@ -239,3 +239,9 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .case-page::before { transition: none; }
 }
+
+/* Approved desktop case-study reading width: 50px extra on either side. */
+@media (min-width: 781px) {
+  .case-page .case-layout { max-width: 1000px; }
+  .case-page .case-section p:not(.section-label) { max-width: 790px; }
+}
