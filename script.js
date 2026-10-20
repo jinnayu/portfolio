@@ -55,3 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 });
+
+
+
+// Portrait movement stays local to the About page and supports touch/keyboard.
+document.addEventListener('DOMContentLoaded', () => {
+  const stage = document.querySelector('.about-portrait-stage');
+  const card = stage?.querySelector('.about-polaroid');
+  if (!card) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const reset = () => { card.style.transform = ''; card.classList.remove('is-lifted'); };
+  stage.addEventListener('pointermove', (event) => {
+    if (reduced.matches || !fine.matches || event.pointerType === 'touch') return;
+    const bounds = stage.getBoundingClientRect();
+    const x = Math.max(-.5, Math.min(.5, (event.clientX - bounds.left) / bounds.width - .5));
+    const y = Math.max(-.5, Math.min(.5, (event.clientY - bounds.top) / bounds.height - .5));
+    card.classList.add('is-lifted');
+    card.style.transform = `translate(${x * 8}px, ${y * 6 - 10}px) rotate(${x * 5}deg) scale(1.025)`;
+  });
+  stage.addEventListener('pointerleave', reset);
+  stage.addEventListener('pointercancel', reset);
+  card.addEventListener('click', () => {
+    if (reduced.matches) return;
+    card.style.transform = '';
+    card.classList.toggle('is-lifted');
+  });
+  card.addEventListener('blur', reset);
+  reduced.addEventListener('change', reset);
+});

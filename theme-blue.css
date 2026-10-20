@@ -645,3 +645,42 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
   letter-spacing: 0;
   margin-bottom: 10px;
 }
+
+
+/* Interactive portrait with a Polaroid frame. */
+.about-page .about-lede { align-items: center; }
+.about-page .about-portrait-stage { min-width: 0; padding: 24px 18px; }
+.about-page .about-polaroid {
+  display: block; box-sizing: border-box; width: 100%; margin: 0;
+  border: 0; border-radius: 0; padding: 16px 16px 48px;
+  background: #FFFDF9; color: inherit; appearance: none;
+  box-shadow: 0 12px 32px rgba(51,67,83,.17);
+  transform: rotate(3deg);
+  transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease;
+  touch-action: manipulation;
+}
+.about-page .about-polaroid img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: 50% 64%; pointer-events: none;
+}
+.about-page .about-polaroid.is-lifted {
+  transform: translateY(-10px) rotate(-1deg) scale(1.025);
+  box-shadow: 0 22px 42px rgba(51,67,83,.22);
+}
+.about-page .about-polaroid:focus-visible { outline: 2px solid #245FA8; outline-offset: 6px; }
+@media (max-width: 780px) {
+  .about-page .about-portrait-stage { width: 100%; max-width: 480px; justify-self: center; padding: 20px 18px; }
+}
+@media (max-width: 480px) {
+  .about-page .about-polaroid { padding: 12px 12px 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-polaroid { transition: none; transform: none !important; }
+}
+/* Keep the About divider within the smaller footer inset. */
+@media (max-width: 780px) {
+  body.about-page .contact.contact-opportunities::before {
+    left: -12px;
+    width: calc(100% + 24px);
+  }
+}
