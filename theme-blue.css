@@ -693,3 +693,13 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
     box-sizing: border-box;
   }
 }
+
+
+/* Loose personal-photo gallery with temporary reference images. */
+.about-page .offclock-grid { gap: 18px; align-items: start; }
+.about-page .offclock-item { min-width: 0; min-height: 0; padding: 0; border-radius: 0; background: transparent; }
+.about-page .offclock-item:nth-child(even) { padding-top: 32px; }
+.about-page .offclock-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; margin-bottom: 18px; transition: transform .25s ease; }
+@media (hover: hover) and (pointer: fine) { .about-page .offclock-item:hover .offclock-photo { transform: translateY(-5px); } }
+@media (max-width: 540px) { .about-page .offclock-item:nth-child(even) { padding-top: 0; } .about-page .offclock-photo { aspect-ratio: 4 / 3; } }
+@media (prefers-reduced-motion: reduce) { .about-page .offclock-photo { transition: none; transform: none !important; } }
