@@ -240,8 +240,15 @@ body::before {
   .case-page::before { transition: none; }
 }
 
-/* Approved desktop case-study reading width: 50px extra on either side. */
+/* Approved desktop case-study width: shared full-width headings, text, images, and metrics. */
 @media (min-width: 781px) {
-  .case-page .case-layout { max-width: 1000px; }
-  .case-page .case-section p:not(.section-label) { max-width: 790px; }
+  .case-page .case-layout { max-width: 1100px; }
+  .case-page .case-content,
+  .case-page .case-section,
+  .case-page .case-section p:not(.section-label),
+  .case-page .media-stage,
+  .case-page .metric-grid {
+    width: 100%;
+    max-width: none;
+  }
 }
