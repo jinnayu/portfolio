@@ -540,3 +540,31 @@ body.home-page .contact.contact-opportunities {
 .about-page .about-proof {margin-left:calc(20px - var(--about-gutter));margin-right:calc(20px - var(--about-gutter));padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
 body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
 @media(max-width:780px){.about-page {--about-gutter:24px;}.about-page .about-hero {padding-left:24px;padding-right:24px;}.about-page .about-proof {margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;}body.about-page .contact.contact-opportunities {margin-left:12px;margin-right:12px;padding-left:12px;padding-right:12px;}}
+
+/* Approved centered homepage hero and restored blue wash. */
+.home-page .home-hero {
+  align-items: center;
+  text-align: center;
+}
+.home-page .hero-name h1,
+.home-page .hero-detail {
+  text-align: center;
+}
+.home-page .hero-detail > p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-page .hero-mini { justify-content: center; }
+.home-page .hero-wash {
+  inset: 17vh 0 auto;
+  height: 42vh;
+  background:
+    radial-gradient(ellipse at 25% 48%, #6A9FCC 0%, transparent 66%),
+    radial-gradient(ellipse at 78% 48%, #6A9FCC 0%, transparent 66%);
+  filter: blur(56px);
+  opacity: .45;
+  transform: scale(1.08);
+}
+@media (max-width: 780px) {
+  .home-page .hero-wash { inset: 19vh 0 auto; height: 37vh; }
+}
