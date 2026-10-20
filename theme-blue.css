@@ -581,7 +581,12 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
   gap: 44px;
   margin-bottom: 48px;
 }
-.about-page .about-story .eyebrow { margin-bottom: 16px; }
+.about-page .about-story .eyebrow {
+  margin-bottom: 16px;
+  font-size: .72rem;
+  line-height: 1.6;
+  letter-spacing: .1em;
+}
 .about-page .about-story h2 { margin-bottom: 36px; }
 .about-page .about-story > p:not(.eyebrow) {
   font-size: 1rem;
@@ -613,3 +618,30 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
   .about-page .offclock { margin-top: 64px; }
 }
 
+
+/* Approved About typography: consistent labels and clear card hierarchy. */
+.about-page .about-work-label,
+.about-page .offclock > .eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.about-page .about-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.about-page .offclock-item {
+  font-size: .875rem;
+  line-height: 1.6;
+}
+.about-page .offclock-item strong {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
