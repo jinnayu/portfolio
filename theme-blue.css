@@ -568,3 +568,9 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
 @media (max-width: 780px) {
   .home-page .hero-wash { inset: 19vh 0 auto; height: 37vh; }
 }
+
+/* Approved additional space between the homepage name and introduction. */
+.home-page .hero-name { margin-bottom: 76px; }
+@media (max-width: 540px) {
+  .home-page .hero-name { margin-bottom: 60px; }
+}
