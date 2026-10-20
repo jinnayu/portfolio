@@ -252,3 +252,8 @@ body::before {
     max-width: none;
   }
 }
+
+/* Align the case-study availability label with the email beneath it. */
+.case-page .contact-opportunities .contact-copy {
+  text-align: left;
+}
