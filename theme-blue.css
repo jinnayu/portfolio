@@ -337,3 +337,23 @@ body .contact.contact-opportunities::before {
   pointer-events: none;
 }
 .case-page .case-nav { border-top: 0; }
+
+/* Shared footer button feedback for pointer and keyboard navigation. */
+body .contact-opportunities .contact-links a {
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+body .contact-opportunities .contact-links a:hover {
+  background: rgba(255,255,255,.32);
+  border-color: rgba(255,255,255,.75);
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(51,67,83,.10);
+}
+body .contact-opportunities .contact-links a:focus-visible {
+  background: rgba(255,255,255,.32);
+  border-color: rgba(255,255,255,.75);
+  outline: 2px solid #FFFDF9;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  body .contact-opportunities .contact-links a { transition: none; }
+}
