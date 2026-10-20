@@ -450,3 +450,27 @@ body .contact-opportunities .contact-links a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .home-page::before { transition: none; }
 }
+
+/* Shared homepage-style navigation behavior on every page. */
+body::before,
+body.home-page::before,
+body.case-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+body.nav-content-reached::before { opacity: 1; }
+body .nav,
+body.home-page .nav,
+body.case-page .nav {
+  background: #F8F5F0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body.nav-content-reached .nav {
+  background: rgba(248,245,240,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before { transition: none; }
+}
