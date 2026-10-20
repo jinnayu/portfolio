@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.body.classList.contains('home-page')) {
+    const work = document.getElementById('work');
+    const nav = document.querySelector('.nav');
+    const updateHomeGlass = () => {
+      if (!work || !nav) return;
+      document.body.classList.toggle('work-at-nav',
+        work.getBoundingClientRect().top <= nav.getBoundingClientRect().bottom);
+    };
+    updateHomeGlass();
+    window.addEventListener('scroll', updateHomeGlass, { passive: true });
+    window.addEventListener('resize', updateHomeGlass);
+    window.addEventListener('pageshow', updateHomeGlass);
+  }
+
   if (document.body.classList.contains('case-page')) {
     const updateNavGlass = () => {
       document.body.classList.toggle('has-scrolled', window.scrollY > 8);

@@ -418,3 +418,35 @@ body .contact-opportunities .contact-links a:focus-visible {
   .hero-name h1 { font-size: clamp(98px, 23vw, 130px); }
   .hero-detail > p { font-size: 28px; }
 }
+
+/* Approved homepage hero spacing and work-triggered glass. */
+.home-page .home-hero {
+  justify-content: flex-start;
+  padding-top: 149px; /* nav bottom (84px) + 65px */
+  min-height: 680px;
+}
+.home-page .hero-name h1 { font-size: clamp(93.5px, 17vw, 174.25px); }
+.home-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.home-page.work-at-nav::before { opacity: 1; }
+.home-page .nav {
+  background: #F8F5F0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.home-page.work-at-nav .nav {
+  background: rgba(248,245,240,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (max-width: 720px) {
+  .home-page .home-hero { padding-top: 133px; }
+}
+@media (max-width: 540px) {
+  .home-page .hero-name h1 { font-size: clamp(83.3px, 19.55vw, 110.5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page::before { transition: none; }
+}
