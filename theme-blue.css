@@ -532,3 +532,11 @@ body.home-page .contact.contact-opportunities {
 @media (max-width: 540px) {
   .about-hero .about-designer { font-size: 28px; }
 }
+
+/* Approved About page shared alignment. */
+
+.about-page {--about-gutter:7vw;}
+.about-page .about-content {max-width:none;margin:0;padding-left:var(--about-gutter);padding-right:var(--about-gutter);}
+.about-page .about-proof {margin-left:calc(20px - var(--about-gutter));margin-right:calc(20px - var(--about-gutter));padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
+body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
+@media(max-width:780px){.about-page {--about-gutter:24px;}.about-page .about-hero {padding-left:24px;padding-right:24px;}.about-page .about-proof {margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;}body.about-page .contact.contact-opportunities {margin-left:12px;margin-right:12px;padding-left:12px;padding-right:12px;}}
