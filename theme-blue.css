@@ -321,3 +321,19 @@ body .contact-opportunities .contact-links a {
   }
   body .contact-opportunities .eyebrow { margin-bottom: 16px; }
 }
+
+/* Divider before every footer; case-study navigation sits above it. */
+body .contact.contact-opportunities {
+  position: relative;
+}
+body .contact.contact-opportunities::before {
+  content: "";
+  position: absolute;
+  top: -21px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+.case-page .case-nav { border-top: 0; }
