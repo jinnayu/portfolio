@@ -684,3 +684,12 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
     width: calc(100% + 24px);
   }
 }
+
+/* Approved desktop portrait reduction. */
+@media (min-width: 781px) {
+  .about-page .about-portrait-stage {
+    width: 80%;
+    justify-self: center;
+    box-sizing: border-box;
+  }
+}
