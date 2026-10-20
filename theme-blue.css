@@ -492,3 +492,27 @@ body.nav-content-reached .nav {
 @media (max-width: 720px) {
   .home-page .home-hero { padding-top: 193px; }
 }
+
+/* Shared homepage content edges, including the inset rounded footer. */
+body.home-page {
+  --home-content-gutter: 8vw;
+}
+.home-page .home-hero,
+.home-page .work {
+  padding-left: var(--home-content-gutter);
+  padding-right: var(--home-content-gutter);
+}
+.home-page .work-copy { padding-left: 0; padding-right: 0; }
+body.home-page .contact.contact-opportunities {
+  padding-left: calc(var(--home-content-gutter) - 20px);
+  padding-right: calc(var(--home-content-gutter) - 20px);
+}
+@media (max-width: 600px) {
+  body.home-page { --home-content-gutter: 24px; }
+  body.home-page .contact.contact-opportunities {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
