@@ -257,3 +257,67 @@ body::before {
 .case-page .contact-opportunities .contact-copy {
   text-align: left;
 }
+
+/* One identical contact footer across homepage, About, and case studies. */
+body .contact.contact-opportunities {
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 44px 6.3% 59px;
+  min-height: 190px;
+  border-radius: 38px;
+  background: #8499B4;
+  color: #FFFDF9;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  text-align: left;
+}
+body .contact-opportunities .contact-copy { min-width: 0; text-align: left; }
+body .contact-opportunities .eyebrow {
+  margin: 0 0 22px;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  color: rgba(255,253,249,.8);
+}
+body .contact.contact-opportunities h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+body .contact-opportunities .contact-email { color: inherit; }
+body .contact-opportunities .contact-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 10px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+body .contact-opportunities .contact-links a {
+  padding: 10px 15px;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  color: inherit;
+}
+@media (max-width: 720px) {
+  body .contact-opportunities .contact-links a { font-size: .7rem; }
+}
+@media (max-width: 600px) {
+  body .contact.contact-opportunities {
+    flex-wrap: wrap;
+    padding: 32px 24px 47px;
+    gap: 24px;
+  }
+  body .contact-opportunities .eyebrow { margin-bottom: 16px; }
+}
