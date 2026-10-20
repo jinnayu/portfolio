@@ -474,3 +474,21 @@ body.nav-content-reached .nav {
 @media (prefers-reduced-motion: reduce) {
   body::before { transition: none; }
 }
+
+/* Approved additional hero breathing room and two-line desktop introduction. */
+.home-page .home-hero {
+  padding-top: 209px;
+  min-height: 740px;
+}
+.home-page .hero-detail,
+.home-page .hero-detail > p { max-width: 100%; }
+@media (min-width: 781px) {
+  .home-page .hero-detail > p { font-size: clamp(28px, 2.9vw, 42px); }
+  .home-page .hero-description-line { display: block; white-space: nowrap; }
+}
+@media (max-width: 780px) {
+  .home-page .hero-description-line { display: inline; white-space: normal; }
+}
+@media (max-width: 720px) {
+  .home-page .home-hero { padding-top: 193px; }
+}
