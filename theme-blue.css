@@ -703,3 +703,31 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
 @media (hover: hover) and (pointer: fine) { .about-page .offclock-item:hover .offclock-photo { transform: translateY(-5px); } }
 @media (max-width: 540px) { .about-page .offclock-item:nth-child(even) { padding-top: 0; } .about-page .offclock-photo { aspect-ratio: 4 / 3; } }
 @media (prefers-reduced-motion: reduce) { .about-page .offclock-photo { transition: none; transform: none !important; } }
+
+
+/* Personal live-photo gallery: hover or touch-and-hold, with no click action. */
+.about-page .offclock-live {
+  position: relative; width: 100%; aspect-ratio: 3 / 4;
+  overflow: hidden; border-radius: 8px; margin-bottom: 18px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  -webkit-touch-callout: none;
+}
+.about-page .offclock-live .offclock-photo {
+  width: 100%; height: 100%; aspect-ratio: auto; margin: 0; border-radius: 0;
+  object-fit: cover; transform: none !important; transition: none;
+  pointer-events: none; user-select: none;
+}
+.about-page .offclock-live video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; pointer-events: none;
+}
+.about-page .offclock-live.is-playing video { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .about-page .offclock-live:hover {
+    transform: translateY(-4px); box-shadow: 0 12px 28px rgba(51,67,83,.16);
+  }
+}
+@media (max-width: 540px) { .about-page .offclock-live { aspect-ratio: 4 / 3; } }
+@media (prefers-reduced-motion: reduce) {
+  .about-page .offclock-live { transition: none; transform: none !important; }
+}
