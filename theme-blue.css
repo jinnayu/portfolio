@@ -731,3 +731,23 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
 @media (prefers-reduced-motion: reduce) {
   .about-page .offclock-live { transition: none; transform: none !important; }
 }
+
+/* Approved Dr. Ruscio framed desktop cover. */
+.home-page .work-artboard-ruscio {
+  background: #E6EDF2;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-page .work-artboard-ruscio::before,
+.home-page .work-artboard-ruscio::after { content: none; }
+.home-page .work-artboard-ruscio img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .home-page .work-artboard-ruscio { padding: 12px; }
+}
