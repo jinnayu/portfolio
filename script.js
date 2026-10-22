@@ -94,6 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.offclock-live').forEach((wrapper) => {
     const video = wrapper.querySelector('video');
     if (!video) return;
+    // Set DOM properties as well as markup for reliable muted looping.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
     let active = false;
     let playRequest = 0;
     const stop = () => {
@@ -125,6 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     wrapper.addEventListener('pointercancel', stop);
     wrapper.addEventListener('contextmenu', (event) => event.preventDefault());
+    // Some browsers report ended for very short clips even with loop enabled.
+    video.addEventListener('ended', () => {
+      if (!active || reduced.matches || document.hidden) return;
+      video.currentTime = 0;
+      play();
+    });
     video.addEventListener('error', stop);
     const observer = new IntersectionObserver((entries) => {
       if (!entries[0].isIntersecting) stop();
