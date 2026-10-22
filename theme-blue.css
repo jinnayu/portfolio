@@ -751,3 +751,18 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
 @media (max-width: 480px) {
   .home-page .work-artboard-ruscio { padding: 12px; }
 }
+
+/* Approved editorial case-study covers, shared across all five projects. */
+.home-page .work-artboard-cover {
+  padding: 0;
+  aspect-ratio: 8 / 5;
+  background: transparent;
+}
+.home-page .work-artboard-cover::before,
+.home-page .work-artboard-cover::after { content: none; }
+.home-page .work-artboard-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
