@@ -1,0 +1,68 @@
+/* Navigation behavior restored from the reference recording */
+.nav {
+  background: rgba(248,245,240,.96);
+  border: 1px solid rgba(132,153,180,.18);
+  box-shadow: 0 8px 24px rgba(51,67,83,.04);
+  border-radius: 34px;
+}
+.nav-links { gap: 6px; }
+.nav-links a {
+  padding: 10px 15px;
+  border-radius: 999px;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.nav-links a:not(.nav-resume):hover,
+.nav-links a:not(.nav-resume):focus-visible {
+  background: rgba(255,255,255,.78);
+  transform: none;
+}
+.nav-resume {
+  background: rgba(255,255,255,.45);
+  border: 1px solid rgba(132,153,180,.28);
+}
+.nav-resume:hover,
+.nav-resume:focus-visible {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(132,153,180,.42);
+  transform: none;
+}
+
+/* Exact uploaded lockup */
+.nav-logo.brand-lockup img {
+  width: 176px;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+/* Footer is one continuous block; no reveal split between connect + copyright */
+.site-footer {
+  background: var(--brand-blue, #8499B4);
+  color: #fffdf9;
+}
+.site-footer .contact {
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+}
+.site-footer .footer {
+  background: transparent;
+  color: rgba(255,253,249,.72);
+  border-top: 1px solid rgba(255,255,255,.18);
+  padding-top: 18px;
+}
+.site-footer .contact .eyebrow { color: rgba(255,253,249,.78); }
+.site-footer .contact-links a {
+  color: #fffdf9;
+  border-color: rgba(255,255,255,.34);
+  background: rgba(255,255,255,.14);
+}
+
+@media (max-width:720px){
+  .nav-logo.brand-lockup img{width:145px;max-height:42px}
+  .nav-links a{padding:9px 11px}
+}
+@media (max-width:520px){
+  .nav-logo.brand-lockup img{width:112px;max-height:36px}
+}
