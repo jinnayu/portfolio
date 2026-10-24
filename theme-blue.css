@@ -766,3 +766,18 @@ body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gu
   height: 100%;
   object-fit: cover;
 }
+
+
+/* Keep all case-study contact footers identical to the homepage. */
+body.case-page .contact.contact-opportunities {
+  padding-left: calc(8vw - 20px);
+  padding-right: calc(8vw - 20px);
+}
+@media (max-width: 600px) {
+  body.case-page .contact.contact-opportunities {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

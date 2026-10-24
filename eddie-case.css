@@ -15,10 +15,6 @@
 #eddie-case-preview [id]{scroll-margin-top:110px}
 #eddie-case-preview .jump a{text-decoration:underline;text-underline-offset:4px;padding-block:8px}
 #eddie-case-preview .next a{padding-block:10px;text-decoration:underline;text-underline-offset:4px}
-.eddie-redesign-polished .contact-opportunities,.eddie-redesign-polished .contact-opportunities .eyebrow,.eddie-redesign-polished .contact-opportunities .contact-email,.eddie-redesign-polished .contact-opportunities .contact-links a{color:#172c3a}
-.eddie-redesign-polished .contact-opportunities .contact-links a{border-color:#172c3a;background:transparent}
-.eddie-redesign-polished .contact-opportunities .contact-links a:hover{background:#172c3a;color:#fffdf9}
-.eddie-redesign-polished .contact-opportunities .eyebrow{font-size:.75rem;opacity:1}
 .eddie-redesign-polished .nav-links a{color:#233b49}
 .eddie-redesign-polished .skip-link{position:absolute;left:15px;top:0;transform:translateY(-160%);z-index:10000;background:#172c3a;color:#fff;padding:12px 18px}
 .eddie-redesign-polished .skip-link:focus{transform:none}
@@ -27,3 +23,4 @@
 #eddie-case-preview .band{margin-inline:0;padding:40px;border-radius:16px}
 @media(max-width:650px){#eddie-case-preview .band{padding:26px}#eddie-case-preview h1{font-size:clamp(2.5rem,11vw,3.5rem)}#eddie-case-preview h2{font-size:clamp(2rem,8vw,2.75rem)}}
 #eddie-case-preview :is(.note-row,.split,.steps,.meta,.impact,.timeline,.decision,.results-grid,.two-images)>*{min-width:0}
+

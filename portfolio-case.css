@@ -15,10 +15,6 @@
 .study-surface [id]{scroll-margin-top:110px}
 .study-surface .jump a{text-decoration:underline;text-underline-offset:4px;padding-block:8px}
 .study-surface .next a{padding-block:10px;text-decoration:underline;text-underline-offset:4px}
-.portfolio-case-polished .contact-opportunities,.portfolio-case-polished .contact-opportunities .eyebrow,.portfolio-case-polished .contact-opportunities .contact-email,.portfolio-case-polished .contact-opportunities .contact-links a{color:#172c3a}
-.portfolio-case-polished .contact-opportunities .contact-links a{border-color:#172c3a;background:transparent}
-.portfolio-case-polished .contact-opportunities .contact-links a:hover{background:#172c3a;color:#fffdf9}
-.portfolio-case-polished .contact-opportunities .eyebrow{font-size:.75rem;opacity:1}
 .portfolio-case-polished .nav-links a{color:#233b49}
 .portfolio-case-polished .skip-link{position:absolute;left:15px;top:0;transform:translateY(-160%);z-index:10000;background:#172c3a;color:#fff;padding:12px 18px}
 .portfolio-case-polished .skip-link:focus{transform:none}
@@ -47,3 +43,4 @@
 .study-surface{margin-top:0;border-radius:0;overflow:visible}
 .study-surface .hero{padding-top:130px}
 @media(max-width:650px){.study-surface .hero{padding-top:110px}}
+
