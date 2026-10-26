@@ -789,3 +789,13 @@ body.case-page .contact.contact-opportunities {
   .nav-links { gap: 0; }
   .nav-links a { padding-left: 5px; padding-right: 5px; }
 }
+
+/* Give mobile footer content an extra 15px of breathing room. */
+@media (max-width: 600px) {
+  body.home-page .contact.contact-opportunities,
+  body.about-page .contact.contact-opportunities,
+  body.case-page .contact.contact-opportunities {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
