@@ -1,0 +1,801 @@
+:root {
+  --brand-blue: #8499B4;
+  --brand-blue-deep: #5F748F;
+  --brand-blue-soft: #DDE5EC;
+  --brand-blue-pale: #EEF2F5;
+  --brand-gold: #D4B07A;
+  --brand-taupe: #A68D78;
+  --brand-cream: #F2E8E2;
+}
+
+/* Style-tile color pass */
+body { background: #F8F5F0; color: #334353; }
+.nav {
+  background: rgba(248,245,240,.88);
+  border-color: rgba(132,153,180,.22);
+}
+.nav-links a:hover { background: rgba(132,153,180,.10); }
+.nav-resume { border-color: rgba(132,153,180,.30); }
+.eyebrow, .case-tag, .section-label, .meta-label, .card-arrow, .intro-link { color: var(--brand-blue-deep); }
+
+/* Homepage */
+.home-hero { background: #F8F5F0; }
+.hero-wash {
+  background:
+    radial-gradient(ellipse at 25% 48%, #6A9FCC 0%, transparent 66%),
+    radial-gradient(ellipse at 78% 48%, #6A9FCC 0%, transparent 66%);
+  filter: blur(56px);
+  opacity: .45;
+}
+.hero-detail > p em { color: #465F7A; }
+.hero-mini { color: #778695; }
+.home-intro { background: var(--brand-blue-pale); }
+.work { background: #F8F5F0; }
+.work-artboard { background: #ECEFF1; }
+
+/* Contact + footer */
+.contact {
+  background: var(--brand-blue);
+  color: #FFFDF9;
+}
+.contact .eyebrow { color: rgba(255,253,249,.78); }
+.contact-links a {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.34);
+  color: #FFFDF9;
+}
+.footer {
+  background: var(--brand-blue);
+  color: rgba(255,253,249,.72);
+  text-align: left;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+.case-contact {
+  margin: 0;
+  padding: 52px 7vw 46px;
+  border-radius: 0;
+}
+.case-contact h2 { font-size: clamp(2.5rem, 5vw, 5rem); }
+
+/* About */
+.about-page { background: #F8F5F0; }
+.about-hero {
+  background: linear-gradient(155deg, #F2E8E2 0%, #E8EDF2 48%, #C8D3DF 100%);
+}
+.about-proof {
+  background: linear-gradient(145deg, #60758F, #8499B4 56%, #A68D78 130%);
+}
+.offclock-item { background: var(--brand-blue-pale); }
+
+/* Case studies */
+.case-page { background: #F8F5F0; }
+.case-page .nav { background: rgba(248,245,240,.88); }
+.case-hero,
+.theme-cro .case-hero,
+.theme-system .case-hero,
+.theme-email .case-hero,
+.theme-ruscio .case-hero {
+  --case-gradient: linear-gradient(145deg, #5F748F 0%, #8499B4 58%, #A68D78 125%);
+}
+.media-stage,
+.theme-system .media-stage,
+.theme-email .media-stage,
+.theme-ruscio .media-stage {
+  background: linear-gradient(145deg, #DCE4EB, #F2E8E2 52%, #C8D3DF);
+}
+.metric-card { border-color: rgba(132,153,180,.20); }
+
+/* Navigation sizing only. Artwork comes from brand.css. */
+.nav {
+  min-height: 66px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.nav-logo.brand-lockup {
+  position: static;
+  transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  width: 142px;
+  height: 60px;
+  flex: 0 0 142px;
+  z-index: 2;
+  overflow: visible;
+}
+.nav-logo.brand-lockup img { display: none !important; }
+.nav-links { margin-left: auto; }
+
+@media (max-width: 900px) {
+  .nav-logo.brand-lockup {
+    width: 136px;
+    height: 58px;
+    flex-basis: 136px;
+  }
+}
+@media (max-width: 720px) {
+  .nav { min-height: 58px; }
+  .nav-logo.brand-lockup {
+    width: 122px;
+    height: 52px;
+    flex-basis: 122px;
+  }
+  .case-contact { padding: 44px 22px 40px; }
+  .footer { padding-left: 22px; padding-right: 22px; }
+}
+@media (max-width: 520px) {
+  .nav-logo.brand-lockup {
+    width: 96px;
+    height: 41px;
+    flex-basis: 96px;
+  }
+}
+
+/* Uploaded Jinna Yu wordmark: preserve its original color and aspect ratio. */
+.nav-logo.brand-lockup {
+  background-image: none;
+  width: 73.185px;
+  height: 44px;
+  flex: 0 0 73.185px;
+  margin-left: 15px;
+}
+.nav-logo.brand-lockup img {
+  display: block !important;
+  width: 73.185px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .nav-logo.brand-lockup { width: 60.9875px; flex-basis: 60.9875px; }
+  .nav-logo.brand-lockup img { width: 60.9875px; }
+}
+
+/* Frost the scrolling content in the gap above and behind the floating nav. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: 96px;
+  z-index: 99;
+  pointer-events: none;
+  background: rgba(248, 245, 240, .64);
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+.nav, .case-page .nav {
+  background: rgba(248, 245, 240, .78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (max-width: 720px) {
+  body::before { height: 80px; }
+}
+
+/* Approved compact homepage contact section. */
+.contact.contact-opportunities {
+  box-sizing: border-box;
+  padding: 44px 6.3% 59px;
+  min-height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+.contact-opportunities .contact-copy { min-width: 0; }
+.contact-opportunities .eyebrow {
+  margin: 0 0 22px;
+  font-size: .72rem;
+  line-height: 1.4;
+  letter-spacing: .08em;
+}
+.contact.contact-opportunities h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+.contact-opportunities .contact-email { color: inherit; }
+.contact-opportunities .contact-email:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-opportunities .contact-links {
+  flex-shrink: 0;
+  gap: 10px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+.contact-opportunities .contact-links a {
+  padding: 10px 15px;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+}
+@media (max-width: 600px) {
+  .contact.contact-opportunities {
+    flex-wrap: wrap;
+    padding: 32px 24px 47px;
+    gap: 24px;
+  }
+  .contact-opportunities .eyebrow { margin-bottom: 16px; }
+}
+
+@media (max-width: 720px) {
+  .contact-opportunities .contact-links a { font-size: .7rem; }
+}
+
+/* Case-study glass strip appears only after scrolling; keep the nav pill visible. */
+.case-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.case-page.has-scrolled::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .case-page::before { transition: none; }
+}
+
+/* Approved desktop case-study width: shared full-width headings, text, images, and metrics. */
+@media (min-width: 781px) {
+  .case-page .case-layout { max-width: 1100px; }
+  .case-page .case-content,
+  .case-page .case-section,
+  .case-page .case-section p:not(.section-label),
+  .case-page .media-stage,
+  .case-page .metric-grid {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Align the case-study availability label with the email beneath it. */
+.case-page .contact-opportunities .contact-copy {
+  text-align: left;
+}
+
+/* One identical contact footer across homepage, About, and case studies. */
+body .contact.contact-opportunities {
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 44px 6.3% 59px;
+  min-height: 190px;
+  border-radius: 38px;
+  background: #8499B4;
+  color: #FFFDF9;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  text-align: left;
+}
+body .contact-opportunities .contact-copy { min-width: 0; text-align: left; }
+body .contact-opportunities .eyebrow {
+  margin: 0 0 22px;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  color: rgba(255,253,249,.8);
+}
+body .contact.contact-opportunities h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+body .contact-opportunities .contact-email { color: inherit; }
+body .contact-opportunities .contact-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 10px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+body .contact-opportunities .contact-links a {
+  padding: 10px 15px;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  color: inherit;
+}
+@media (max-width: 720px) {
+  body .contact-opportunities .contact-links a { font-size: .7rem; }
+}
+@media (max-width: 600px) {
+  body .contact.contact-opportunities {
+    flex-wrap: wrap;
+    padding: 32px 24px 47px;
+    gap: 24px;
+  }
+  body .contact-opportunities .eyebrow { margin-bottom: 16px; }
+}
+
+/* Divider before every footer; case-study navigation sits above it. */
+body .contact.contact-opportunities {
+  position: relative;
+}
+body .contact.contact-opportunities::before {
+  content: "";
+  position: absolute;
+  top: -21px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+.case-page .case-nav { border-top: 0; }
+
+/* Shared footer button feedback for pointer and keyboard navigation. */
+body .contact-opportunities .contact-links a {
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+body .contact-opportunities .contact-links a:hover {
+  background: rgba(255,255,255,.32);
+  border-color: rgba(255,255,255,.75);
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(51,67,83,.10);
+}
+body .contact-opportunities .contact-links a:focus-visible {
+  background: rgba(255,255,255,.32);
+  border-color: rgba(255,255,255,.75);
+  outline: 2px solid #FFFDF9;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  body .contact-opportunities .contact-links a { transition: none; }
+}
+
+/* Approved editorial homepage hero. */
+.home-hero {
+  min-height: 610px;
+  padding: 64px 8% 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.hero-wash {
+  inset: -100px -15% 30%;
+  height: auto;
+  background: radial-gradient(ellipse at 20% 30%, rgba(106,159,204,.25), transparent 72%);
+  filter: blur(56px);
+  opacity: 1;
+  transform: none;
+}
+.hero-name {
+  position: relative;
+  inset: auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 46px;
+  transform: none;
+}
+.hero-name h1 {
+  font-size: clamp(110px, 20vw, 205px);
+  line-height: .78;
+  letter-spacing: -.055em;
+  text-align: left;
+  color: #FFFDF9;
+}
+.hero-detail {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: 750px;
+  transform: none;
+  text-align: left;
+}
+.hero-name.reveal, .hero-detail.reveal { transform: translateY(24px); }
+.hero-name.reveal.is-visible, .hero-detail.reveal.is-visible { transform: none; }
+.hero-detail > p {
+  margin: 0;
+  max-width: 750px;
+  font-size: clamp(28px, 4.1vw, 42px);
+  line-height: 1.13;
+  letter-spacing: -.02em;
+  color: #23342F;
+}
+.hero-detail > p strong { font-weight: 400; font-style: italic; }
+.hero-detail > p em { color: #245FA8; }
+.hero-mini { justify-content: flex-start; margin-top: 30px; }
+@media (max-width: 540px) {
+  .home-hero { min-height: 500px; padding: 100px 24px 40px; }
+  .hero-name { margin-bottom: 42px; }
+  .hero-name h1 { font-size: clamp(98px, 23vw, 130px); }
+  .hero-detail > p { font-size: 28px; }
+}
+
+/* Approved homepage hero spacing and work-triggered glass. */
+.home-page .home-hero {
+  justify-content: flex-start;
+  padding-top: 149px; /* nav bottom (84px) + 65px */
+  min-height: 680px;
+}
+.home-page .hero-name h1 { font-size: clamp(93.5px, 17vw, 174.25px); }
+.home-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.home-page.work-at-nav::before { opacity: 1; }
+.home-page .nav {
+  background: #F8F5F0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.home-page.work-at-nav .nav {
+  background: rgba(248,245,240,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (max-width: 720px) {
+  .home-page .home-hero { padding-top: 133px; }
+}
+@media (max-width: 540px) {
+  .home-page .hero-name h1 { font-size: clamp(83.3px, 19.55vw, 110.5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page::before { transition: none; }
+}
+
+/* Shared homepage-style navigation behavior on every page. */
+body::before,
+body.home-page::before,
+body.case-page::before {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+body.nav-content-reached::before { opacity: 1; }
+body .nav,
+body.home-page .nav,
+body.case-page .nav {
+  background: #F8F5F0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body.nav-content-reached .nav {
+  background: rgba(248,245,240,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before { transition: none; }
+}
+
+/* Approved additional hero breathing room and two-line desktop introduction. */
+.home-page .home-hero {
+  padding-top: 209px;
+  min-height: 740px;
+}
+.home-page .hero-detail,
+.home-page .hero-detail > p { max-width: 100%; }
+@media (min-width: 781px) {
+  .home-page .hero-detail > p { font-size: clamp(28px, 2.9vw, 42px); }
+  .home-page .hero-description-line { display: block; white-space: nowrap; }
+}
+@media (max-width: 780px) {
+  .home-page .hero-description-line { display: inline; white-space: normal; }
+}
+@media (max-width: 720px) {
+  .home-page .home-hero { padding-top: 193px; }
+}
+
+/* Shared homepage content edges, including the inset rounded footer. */
+body.home-page {
+  --home-content-gutter: 8vw;
+}
+.home-page .home-hero,
+.home-page .work {
+  padding-left: var(--home-content-gutter);
+  padding-right: var(--home-content-gutter);
+}
+.home-page .work-copy { padding-left: 0; padding-right: 0; }
+body.home-page .contact.contact-opportunities {
+  padding-left: calc(var(--home-content-gutter) - 20px);
+  padding-right: calc(var(--home-content-gutter) - 20px);
+}
+@media (max-width: 600px) {
+  body.home-page { --home-content-gutter: 24px; }
+  body.home-page .contact.contact-opportunities {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* About subtitle matches the homepage introduction typography. */
+.about-hero .about-designer {
+  display: block;
+  margin-top: 24px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.9vw, 42px);
+  line-height: 1.13;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -.02em;
+  color: #23342F;
+}
+@media (max-width: 540px) {
+  .about-hero .about-designer { font-size: 28px; }
+}
+
+/* Approved About page shared alignment. */
+
+.about-page {--about-gutter:7vw;}
+.about-page .about-content {max-width:none;margin:0;padding-left:var(--about-gutter);padding-right:var(--about-gutter);}
+.about-page .about-proof {margin-left:calc(20px - var(--about-gutter));margin-right:calc(20px - var(--about-gutter));padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
+body.about-page .contact.contact-opportunities {padding-left:calc(var(--about-gutter) - 20px);padding-right:calc(var(--about-gutter) - 20px);}
+@media(max-width:780px){.about-page {--about-gutter:24px;}.about-page .about-hero {padding-left:24px;padding-right:24px;}.about-page .about-proof {margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;}body.about-page .contact.contact-opportunities {margin-left:12px;margin-right:12px;padding-left:12px;padding-right:12px;}}
+
+/* Approved centered homepage hero and restored blue wash. */
+.home-page .home-hero {
+  align-items: center;
+  text-align: center;
+}
+.home-page .hero-name h1,
+.home-page .hero-detail {
+  text-align: center;
+}
+.home-page .hero-detail > p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-page .hero-mini { justify-content: center; }
+.home-page .hero-wash {
+  inset: 17vh 0 auto;
+  height: 42vh;
+  background:
+    radial-gradient(ellipse at 25% 48%, #6A9FCC 0%, transparent 66%),
+    radial-gradient(ellipse at 78% 48%, #6A9FCC 0%, transparent 66%);
+  filter: blur(56px);
+  opacity: .45;
+  transform: scale(1.08);
+}
+@media (max-width: 780px) {
+  .home-page .hero-wash { inset: 19vh 0 auto; height: 37vh; }
+}
+
+/* Approved additional space between the homepage name and introduction. */
+.home-page .hero-name { margin-bottom: 76px; }
+@media (max-width: 540px) {
+  .home-page .hero-name { margin-bottom: 60px; }
+}
+
+/* About reference layout: story beside a future portrait. */
+.about-page .about-lede {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 44px;
+  margin-bottom: 48px;
+}
+.about-page .about-story .eyebrow {
+  margin-bottom: 16px;
+  font-size: .72rem;
+  line-height: 1.6;
+  letter-spacing: .1em;
+}
+.about-page .about-story h2 { margin-bottom: 36px; }
+.about-page .about-story > p:not(.eyebrow) {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.about-page .about-story > p:last-child { margin-bottom: 0; }
+.about-page .about-image-placeholder {
+  width: 100%;
+  min-height: 100%;
+  aspect-ratio: 1.42;
+  background: #D9D9D9;
+}
+.about-page .about-work-label {
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.about-page .offclock { margin-top: 110px; }
+.about-page .offclock h2 { margin-bottom: 24px; }
+.about-page .offclock-item { color: #334353; }
+.about-page .offclock-item strong { letter-spacing: 0; }
+@media (max-width: 780px) {
+  .about-page .about-lede { grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+  .about-page .about-story h2 { margin-bottom: 24px; }
+  .about-page .about-image-placeholder { min-height: 0; }
+  .about-page .offclock { margin-top: 64px; }
+}
+
+
+/* Approved About typography: consistent labels and clear card hierarchy. */
+.about-page .about-work-label,
+.about-page .offclock > .eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.about-page .about-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.about-page .offclock-item {
+  font-size: .875rem;
+  line-height: 1.6;
+}
+.about-page .offclock-item strong {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+
+/* Interactive portrait with a Polaroid frame. */
+.about-page .about-lede { align-items: center; }
+.about-page .about-portrait-stage { min-width: 0; padding: 24px 18px; }
+.about-page .about-polaroid {
+  display: block; box-sizing: border-box; width: 100%; margin: 0;
+  border: 0; border-radius: 0; padding: 16px 16px 48px;
+  background: #FFFDF9; color: inherit; appearance: none;
+  box-shadow: 0 12px 32px rgba(51,67,83,.17);
+  transform: rotate(3deg);
+  transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease;
+  touch-action: manipulation;
+}
+.about-page .about-polaroid img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: 50% 64%; pointer-events: none;
+}
+.about-page .about-polaroid.is-lifted {
+  transform: translateY(-10px) rotate(-1deg) scale(1.025);
+  box-shadow: 0 22px 42px rgba(51,67,83,.22);
+}
+.about-page .about-polaroid:focus-visible { outline: 2px solid #245FA8; outline-offset: 6px; }
+@media (max-width: 780px) {
+  .about-page .about-portrait-stage { width: 100%; max-width: 480px; justify-self: center; padding: 20px 18px; }
+}
+@media (max-width: 480px) {
+  .about-page .about-polaroid { padding: 12px 12px 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-polaroid { transition: none; transform: none !important; }
+}
+/* Keep the About divider within the smaller footer inset. */
+@media (max-width: 780px) {
+  body.about-page .contact.contact-opportunities::before {
+    left: -12px;
+    width: calc(100% + 24px);
+  }
+}
+
+/* Approved desktop portrait reduction. */
+@media (min-width: 781px) {
+  .about-page .about-portrait-stage {
+    width: 80%;
+    justify-self: center;
+    box-sizing: border-box;
+  }
+}
+
+
+/* Loose personal-photo gallery with temporary reference images. */
+.about-page .offclock-grid { gap: 18px; align-items: start; }
+.about-page .offclock-item { min-width: 0; min-height: 0; padding: 0; border-radius: 0; background: transparent; }
+.about-page .offclock-item:nth-child(even) { padding-top: 32px; }
+.about-page .offclock-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; margin-bottom: 18px; transition: transform .25s ease; }
+@media (hover: hover) and (pointer: fine) { .about-page .offclock-item:hover .offclock-photo { transform: translateY(-5px); } }
+@media (max-width: 540px) { .about-page .offclock-item:nth-child(even) { padding-top: 0; } .about-page .offclock-photo { aspect-ratio: 4 / 3; } }
+@media (prefers-reduced-motion: reduce) { .about-page .offclock-photo { transition: none; transform: none !important; } }
+
+
+/* Personal live-photo gallery: hover or touch-and-hold, with no click action. */
+.about-page .offclock-live {
+  position: relative; width: 100%; aspect-ratio: 3 / 4;
+  overflow: hidden; border-radius: 8px; margin-bottom: 18px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  -webkit-touch-callout: none;
+}
+.about-page .offclock-live .offclock-photo {
+  width: 100%; height: 100%; aspect-ratio: auto; margin: 0; border-radius: 0;
+  object-fit: cover; transform: none !important; transition: none;
+  pointer-events: none; user-select: none;
+}
+.about-page .offclock-live video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; pointer-events: none;
+}
+.about-page .offclock-live.is-playing video { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .about-page .offclock-live:hover {
+    transform: translateY(-4px); box-shadow: 0 12px 28px rgba(51,67,83,.16);
+  }
+}
+@media (max-width: 540px) { .about-page .offclock-live { aspect-ratio: 4 / 3; } }
+@media (prefers-reduced-motion: reduce) {
+  .about-page .offclock-live { transition: none; transform: none !important; }
+}
+
+/* Approved Dr. Ruscio framed desktop cover. */
+.home-page .work-artboard-ruscio {
+  background: #E6EDF2;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-page .work-artboard-ruscio::before,
+.home-page .work-artboard-ruscio::after { content: none; }
+.home-page .work-artboard-ruscio img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .home-page .work-artboard-ruscio { padding: 12px; }
+}
+
+/* Approved editorial case-study covers, shared across all five projects. */
+.home-page .work-artboard-cover {
+  padding: 0;
+  aspect-ratio: 8 / 5;
+  background: transparent;
+}
+.home-page .work-artboard-cover::before,
+.home-page .work-artboard-cover::after { content: none; }
+.home-page .work-artboard-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Keep all case-study contact footers identical to the homepage. */
+body.case-page .contact.contact-opportunities {
+  padding-left: calc(8vw - 20px);
+  padding-right: calc(8vw - 20px);
+}
+@media (max-width: 600px) {
+  body.case-page .contact.contact-opportunities {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+/* Keep Resume available at every navigation breakpoint. */
+.nav-links .nav-resume { display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 380px) {
+  .nav-links { gap: 0; }
+  .nav-links a { padding-left: 5px; padding-right: 5px; }
+}
+
+/* Give mobile footer content an extra 15px of breathing room. */
+@media (max-width: 600px) {
+  body.home-page .contact.contact-opportunities,
+  body.about-page .contact.contact-opportunities,
+  body.case-page .contact.contact-opportunities {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}

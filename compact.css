@@ -1,0 +1,115 @@
+/* Compact reading pass: shorter pages, faster skim */
+
+/* About */
+.about-hero {
+  min-height: 52vh;
+  padding: 118px 7vw 52px;
+}
+.about-hero h1 {
+  font-size: clamp(4rem, 8vw, 7.8rem);
+  max-width: 980px;
+}
+.about-content { padding: 64px 6vw 82px; }
+.about-lede {
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  margin-bottom: 56px;
+}
+.about-lede h2 { font-size: clamp(2.8rem, 5vw, 4.8rem); }
+.about-lede p { font-size: 1rem; }
+.about-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.about-block {
+  min-height: 0;
+  padding: 24px;
+}
+.about-block h3 { font-size: 2.05rem; margin-bottom: 8px; }
+.about-block p { margin-bottom: 0; font-size: .92rem; }
+.about-proof {
+  margin-top: 56px;
+  padding: 38px;
+}
+.about-proof h2 { font-size: clamp(2.8rem, 5vw, 4.8rem); margin-bottom: 22px; }
+.about-proof .metric-grid { margin: 0; }
+.offclock { margin-top: 56px; }
+.offclock h2 { font-size: clamp(2.8rem, 5vw, 4.8rem); margin-bottom: 20px; }
+.offclock-grid { gap: 10px; }
+.offclock-item { min-height: 0; padding: 18px; font-size: .9rem; }
+.offclock-item strong { margin-bottom: 10px; }
+.about-page .contact { padding-top: 52px; padding-bottom: 52px; }
+.about-page .contact h2 { font-size: clamp(2.8rem, 5vw, 4.8rem); }
+
+/* Case studies */
+.case-hero {
+  min-height: 400px;
+  padding: 116px 7vw 58px;
+}
+.case-hero h1 {
+  font-size: clamp(3.8rem, 7.4vw, 7.4rem);
+  margin: 20px 0 12px;
+}
+.case-dek { max-width: 650px; font-size: .98rem; }
+.case-overlap { margin-top: -32px; }
+.case-meta-card {
+  padding: 20px 24px;
+  border-radius: 22px;
+  gap: 18px;
+}
+.meta-label { margin-bottom: 5px; }
+.meta-value { font-size: .84rem; }
+.meta-item + .meta-item { padding-left: 18px; }
+.case-layout {
+  display: block;
+  max-width: 900px;
+  padding: 58px 6vw 72px;
+}
+.case-toc { display: none; }
+.case-section {
+  margin-bottom: 52px;
+  scroll-margin-top: 90px;
+}
+.case-section:last-child { margin-bottom: 0; }
+.section-label { margin-bottom: 10px; }
+.case-section h2 {
+  font-size: clamp(2.7rem, 4.6vw, 4.5rem);
+  margin-bottom: 16px;
+}
+.case-section h3 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 30px 0 12px;
+}
+.case-section p {
+  font-size: .98rem;
+  max-width: 690px;
+  margin-bottom: 14px;
+}
+.pull-quote {
+  font-size: clamp(2rem, 3.6vw, 3.7rem);
+  margin: 28px 0;
+}
+.media-stage {
+  min-height: 300px;
+  margin: 24px 0 30px;
+  border-radius: 22px;
+}
+.metric-grid { margin: 24px 0 12px; gap: 10px; }
+.metric-card { padding: 18px; border-radius: 18px; }
+.metric-number { font-size: clamp(2.7rem, 4.4vw, 4.4rem); }
+.case-nav a { padding-top: 28px; padding-bottom: 28px; }
+
+@media (max-width: 780px) {
+  .about-hero { min-height: 48vh; padding: 105px 22px 42px; }
+  .about-content { padding: 52px 20px 66px; }
+  .about-lede { grid-template-columns: 1fr; gap: 16px; margin-bottom: 44px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-proof { margin-top: 44px; padding: 28px 20px; }
+  .offclock { margin-top: 44px; }
+  .case-hero { min-height: 370px; padding: 108px 22px 62px; }
+  .case-overlap { padding: 0 14px; }
+  .case-meta-card { grid-template-columns: 1fr 1fr; }
+  .case-layout { padding: 48px 20px 62px; }
+  .case-section { margin-bottom: 44px; }
+  .media-stage { min-height: 240px; }
+}
